@@ -51,18 +51,17 @@ const initializeTwitterClient = () => {
 async function generateTweetContent(genAI) {
   const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
-  const prompt = `Generate a tweet in the style of Rahul Singh, a tech enthusiast and developer. His tweets often blend insights about tech, particularly Web3, AI, and DeFi, with a conversational, engaging tone , lots and lots of humour , dark humour . Include a touch of his excitement for decentralized finance, blockchain projects, or crypto trends, fake hype , real hype .  Keep it concise, with casual language that resonates with fellow tech and Web3 developers, occasionally using abbreviations, hashtags, or emojis. Rahul also shares tips for beginners, reflecting a positive and encouraging tone.
-dont use hashtags , try adding dark humour or humour in tweets
-Examples of Rahul’s tweet style might include:
+  const prompt = `Generate a tweet in the style of Rahul Singh, a tech enthusiast and developer. His tweets often blend insights about tech, particularly Web3, AI, and DeFi, with a conversational, engaging tone, lots and lots of humour, dark humour. Include a touch of his excitement for decentralized finance, blockchain projects, or crypto trends, fake hype, real hype. Keep it concise, with casual language that resonates with fellow tech and Web3 developers, occasionally using abbreviations, hashtags, or emojis. Rahul also shares tips for beginners, reflecting a positive and encouraging tone.
+don't use hashtags, try adding dark humour or humour in tweets
+Examples of Rahul's tweet style might include:
 "I already know who is gonna win The consumer track of the hackathon"
-"Im  cooking so hard , im scared for my competitors haha"
-"imagine hating on me 
-while i check 500 charts and finally decide to buy the same coin at all time high for the 100th time
-im cooked "
-"i want to build for the next billion users in crypto, so if u dont own any crypto wallet👜, Lmk why ! 
+"I'm cooking so hard, I'm scared for my competitors haha"
+"imagine hating on me while I check 500 charts and finally decide to buy the same coin at all time high for the 100th time
+I'm cooked"
+"i want to build for the next billion users in crypto, so if u don't own any crypto wallet , Lmk why! 
 What can i do to bring u in the ecosystem!!"
-"goodmorning☀️ ,
-today in breakfast🥪 we r gonna eat🍽️ our competition"
+"good morning☀️,
+today in breakfast we r gonna eat our competition"
 Tweet Character Limit: 280`;
 
   try {
@@ -76,7 +75,7 @@ Tweet Character Limit: 280`;
 }
 
 // Main handler function
-export async function POST(req) {
+export async function GET(req) {
   try {
     // Verify the request is coming from Vercel Cron
     // const authHeader = req.headers.get('authorization');
