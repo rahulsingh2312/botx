@@ -2,7 +2,7 @@ name: Hit Tweet API
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Run every 6 hours (4 times a day)
+    - cron: '*/29 * * * *'  # Runs every 29 minutes to get close to 50 tweets per day
 
 jobs:
 
@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Hit API
       run: |
-        curl -X GET https://botxog.vercel.app/api/tweet
+        curl -X POST https://botxog.vercel.app/api/tweet
