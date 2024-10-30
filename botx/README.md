@@ -17,8 +17,7 @@ This Twitter bot will generate tweets in your style and post them automatically 
 - Modify the prompt in the `src/app/api/tweet/route.js` file to match your unique tone, style, or use case.
 
 ### Step 3: Deploy to Vercel
-- Deploy the bot to Vercel for automated, scheduled tweets.
-- (default) (u can just change this if u vercel pro) Check `vercel.json` to set the post frequency (default is 1 post per day).
+- Deploy the bot to Vercel 
 
 ### Step 3.5: Change the link in github workflow
 - The deployed link you will get from vercel change it in .github/workflow/tweet-bot.yml
