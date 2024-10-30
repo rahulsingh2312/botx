@@ -62,7 +62,9 @@ I'm cooked"
 What can i do to bring u in the ecosystem!!"
 "good morning☀️,
 today in breakfast we r gonna eat our competition"
-Tweet Character Limit: 280`;
+Tweet Character Limit: 
+and dont use hashtags 
+no hashtags `;
 
   try {
     const result = await model.generateContent(prompt);
