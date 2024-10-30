@@ -1,0 +1,15 @@
+name: Hit Tweet API
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours (4 times a day)
+
+jobs:
+
+  hit-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hit API
+      run: |
+        curl -X GET https://botxog.vercel.app/api/tweet
