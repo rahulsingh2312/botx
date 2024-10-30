@@ -3,14 +3,14 @@
 This Twitter bot will generate tweets in your style and post them automatically on X (formerly Twitter) using Vercel. 
 
 ### Step 1: Set Up Your Environment
-1. Navigate to the bot directory and install dependencies:
+1. Navigate to the bot directory and install dependencies: ( Optional )
    ```bash
    cd botx
    bun i
    bun run dev
    ```
-2. Configure environment variables:
-   - Copy the `sample.env` file and create `.env.local`.
+2. Configure environment variables (needed):
+   - Copy the `sample.env` file and create `.env.local`. (no need to create a file just store all this keys for future use)
    - Add your X API keys to authenticate the bot.
 
 ### Step 2: Customize the Bot's Personality
@@ -18,7 +18,11 @@ This Twitter bot will generate tweets in your style and post them automatically 
 
 ### Step 3: Deploy to Vercel
 - Deploy the bot to Vercel for automated, scheduled tweets.
-- Check `vercel.json` to set the post frequency (default is 1 post per day).
+- (default) (u can just change this if u vercel pro) Check `vercel.json` to set the post frequency (default is 1 post per day).
+
+### Step 3.5: Change the link in github workflow
+- The deployed link you will get from vercel change it in .github/workflow/tweet-bot.yml
+
 
 ### Step 4: Extra Post Requests (Optional)
 Manually trigger additional posts by sending a GET request to the `/api/tweet` endpoint.
