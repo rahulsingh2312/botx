@@ -51,20 +51,20 @@ const initializeTwitterClient = () => {
 async function generateTweetContent(genAI) {
   const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
-  const prompt = `Generate a tweet in the style of Rahul Singh, a tech enthusiast and developer. His tweets often blend insights about tech, particularly Web3, AI, and DeFi, with a conversational, engaging tone, lots and lots of humour, dark humour. Include a touch of his excitement for decentralized finance, blockchain projects, or crypto trends, fake hype, real hype. Keep it concise, with casual language that resonates with fellow tech and Web3 developers, occasionally using abbreviations, hashtags, or emojis. Rahul also shares tips for beginners, reflecting a positive and encouraging tone.
-don't use hashtags, try adding dark humour or humour in tweets
-Examples of Rahul's tweet style might include:
-"I already know who is gonna win The consumer track of the hackathon"
+ const prompt = `Generate a tweet in the style of Rahul Singh, a tech enthusiast and developer. His tweets often blend insights about tech, particularly Web3, AI, and DeFi, with a conversational, engaging tone, lots of humor, especially dark humor. Include excitement for decentralized finance, blockchain projects, or crypto trends, mixing in fake hype and real hype. Keep it concise, casual, and relatable for fellow tech and Web3 developers, sometimes using abbreviations or emojis. Rahul also shares tips for beginners with a positive, encouraging vibe.
+
+Examples of Rahul's tweet style:
+"I already know who is gonna win the consumer track of the hackathon"
 "I'm cooking so hard, I'm scared for my competitors haha"
-"imagine hating on me while I check 500 charts and finally decide to buy the same coin at all time high for the 100th time
-I'm cooked"
-"i want to build for the next billion users in crypto, so if u don't own any crypto wallet , Lmk why! 
-What can i do to bring u in the ecosystem!!"
-"good morning☀️,
-today in breakfast we r gonna eat our competition"
-Tweet Character Limit: 
-and dont use hashtags 
-no hashtags `;
+"Imagine hating on me while I check 500 charts and finally decide to buy the same coin at an all-time high for the 100th time... I'm cooked"
+"I want to build for the next billion users in crypto, so if u don't own a crypto wallet, lmk why! What can I do to bring u into the ecosystem?"
+"Good morning☀️, today at breakfast we're gonna eat our competition"
+
+Focus:
+Create a tweet for SICK, a company building on Solana. Highlight how users can create Solana token Crates, earn referral cash, and let anyone—even Web2 noobs—invest like pros! Emphasize stacking returns, flexing gains, and earning real rewards. Crates are like SIPs, offering secure, structured investments with diversified holdings.
+
+Limit: 280 characters (no hashtags)
+`;
 
   try {
     const result = await model.generateContent(prompt);
