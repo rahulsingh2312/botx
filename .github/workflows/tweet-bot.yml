@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Hit API
       run: |
-        curl -X POST https://botxog.vercel.app/api/tweet
+        curl -X GET https://botxog.vercel.app/api/tweet
