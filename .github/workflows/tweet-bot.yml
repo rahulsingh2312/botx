@@ -2,10 +2,9 @@ name: Hit Tweet API
 
 on:
   schedule:
-    - cron: '*/29 * * * *'  # Runs every 29 minutes to get close to 50 tweets per day
+    - cron: '0 0 * * *'  # Runs every day at midnight (UTC)
 
 jobs:
-
   hit-api:
     runs-on: ubuntu-latest
 
